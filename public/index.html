@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Pattern Demo - Bildirim Sistemi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-cogs"></i> Factory Pattern Demo</h1>
+                <p>Bildirim Sistemi - Tasarım Deseni Örneği</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Form Section -->
+            <section class="form-section">
+                <div class="card">
+                    <h2><i class="fas fa-paper-plane"></i> Bildirim Gönder</h2>
+                    
+                    <form id="notificationForm" class="notification-form">
+                        <div class="form-group">
+                            <label for="notificationType">
+                                <i class="fas fa-list"></i> Bildirim Tipi
+                            </label>
+                            <select id="notificationType" name="type" required>
+                                <option value="">Bildirim tipini seçin</option>
+                                <option value="sms">📱 SMS</option>
+                                <option value="email">📧 Email</option>
+                                <option value="push">🔔 Push Notification</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="recipient">
+                                <i class="fas fa-user"></i> Alıcı
+                            </label>
+                            <input type="text" id="recipient" name="to" placeholder="Telefon, email veya kullanıcı ID" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">
+                                <i class="fas fa-comment"></i> Mesaj
+                            </label>
+                            <textarea id="message" name="message" placeholder="Bildirim mesajınızı yazın..." required rows="3"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-send">
+                            <i class="fas fa-send"></i> Bildirim Gönder
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section">
+                <div class="card">
+                    <h2><i class="fas fa-history"></i> Sonuçlar</h2>
+                    <div id="results" class="results-container">
+                        <div class="empty-state">
+                            <i class="fas fa-inbox"></i>
+                            <p>Henüz bildirim gönderilmedi</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Info Section -->
+            <section class="info-section">
+                <div class="card">
+                    <h2><i class="fas fa-info-circle"></i> Factory Pattern Hakkında</h2>
+                    <div class="info-content">
+                        <div class="info-item">
+                            <h3>🎯 Amaç</h3>
+                            <p>Nesne oluşturma işlemini merkezi bir yerde toplar ve kod tekrarını önler.</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>✅ Avantajlar</h3>
+                            <ul>
+                                <li>Esnek ve genişletilebilir yapı</li>
+                                <li>Kod tekrarını önler</li>
+                                <li>Bakım kolaylığı</li>
+                                <li>Test edilebilirlik</li>
+                            </ul>
+                        </div>
+                        <div class="info-item">
+                            <h3>🔧 Kullanım Alanları</h3>
+                            <ul>
+                                <li>Bildirim sistemleri</li>
+                                <li>Dosya formatları</li>
+                                <li>Veritabanı bağlantıları</li>
+                                <li>UI bileşenleri</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Factory Pattern Demo - Node.js & Express</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
